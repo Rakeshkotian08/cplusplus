@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int arrcount(int arr[],int size)
+{
+    int a=arr[0];
+    for(int i=1;i<size;i++)
+    {
+        a=a^arr[i];
+    }
+    return a;
+    
+}
+int main()
+{
+     int arr[]={1,1,2,4,2,3,3};
+     int size=sizeof(arr)/sizeof(arr[0]);
+     cout<<arrcount(arr,size);
+}
