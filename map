@@ -1,0 +1,35 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <map>
+using namespace std;
+
+
+int main() {
+    int n;
+    cin>>n;
+    string key;
+    map<string,string>mp;
+   
+    for(int i=0;i<n;i++)
+    {
+        string a;
+        string num;
+        cin>>a>>num;
+        mp.insert(make_pair(a,num));
+    }  
+   while(cin>>key)
+   {
+      if(mp.find(key)!=mp.end())
+        {
+            cout<<key<<"="<<mp[key]<<endl;
+        }
+        else
+        {
+            cout<<"Not found"<<endl;
+        }
+   }
+    return 0;
+}
